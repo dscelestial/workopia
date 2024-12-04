@@ -1,20 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Request;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('pages.index');
 
-Route::get('/jobs', function () {
-    return view('jobs.index', [
-        'title' => 'Jobs',
-        'jobs' => [
-            'Web Developer',
-            'Software Engineer',
-            'Database Administrator',
-            'System Analyst'
-        ],
-    ]);
-});
+Route::resource('jobs', JobController::class);
