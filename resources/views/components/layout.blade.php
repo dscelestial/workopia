@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <x-header />
-    <h1>HOME</h1>
+    {{ $slot }}
 </body>
 
 </html>

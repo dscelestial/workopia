@@ -1,4 +1,4 @@
 <x-layout>
     <x-header />
-    <h1>create</h1>
+    <h1>Show Job {{ $id }}</h1>
 </x-layout>
