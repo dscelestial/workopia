@@ -1,5 +1,4 @@
 <x-layout>
-    <x-header />
     <h1>Available Jobs</h1>
     @foreach ($jobs as $job)
         <li>{{ $job }}</li>
